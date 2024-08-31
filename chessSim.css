@@ -84,6 +84,8 @@ body, html {
      border: 1px solid #e1e1e1; /* subtle outline */
      position:absolute;
      bottom: 10px;
+     left: 200px;
+     right:200px;
 } 
 #progress-bar-fill { 
      height: 50px; 
@@ -93,3 +95,17 @@ body, html {
      transition: width 0.2s ease-in-out; 
      background-image: repeating-linear-gradient( 45deg, #f9f9f9, #e0e0e0 10px, #189AB4 10px, #189AB4 20px ); /* darker diagonal stripes */
 } 
+
+#below_level {
+    position: absolute;
+    left: 150px;
+    font-size: 30px;
+    bottom: 15px;
+}
+
+#upper_level {
+    position:absolute;
+    right:150px;
+    font-size: 30px;
+    bottom: 15px;
+}

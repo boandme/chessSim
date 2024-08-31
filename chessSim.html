@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
+    <title> Chesslife v0.05 </title>
     <script src = "chessSim.js"></script>
     <link rel = "stylesheet" href = "chessSim.css">
     <body>
         <div id = "title_line"> 
             <span id = "moneysign"> $</span>
             <span id = "money"> 100</span>
-            <span id = "title"> Chess Player Simulator</span>    
+            <span id = "title"> ChessLife v0.05</span>    
         </div>
         <div id = "tab">
             <button class = "tablinks" onclick = "OpenTab(event, 'Profile')"> Profile </button>
@@ -33,9 +34,11 @@
                 <button onclick = "online_game()" id = "online_games"> <h3>>Play an Online Game | $5</h3><p> Increases xp more </p> </button>
                 <button onclick = "chess_class()" id = "puzzles"> <h3>>Take a chess class | $15</h3><p> Increases xp even more</p> </button>
             </div>
+            <span id = "below_level"> 1 </span>
             <div id="progress-bar"> 
-                <object id="progress-bar-fill" style="width: 70px;"></object> 
+                <object id="progress-bar-fill" style="width: 70px;"></object>     
             </div>
+            <span id = "upper_level"> 2</span>
             
 
             </div>

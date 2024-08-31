@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <script src = "chessSim.js"></script>
+    <link rel = "stylesheet" href = "chessSim.css">
+    <body>
+        <div id = "title_line"> 
+            <span id = "moneysign"> $</span>
+            <span id = "money"> 100</span>
+            <span id = "title"> Chess Player Simulator</span>    
+        </div>
+        <div id = "tab">
+            <button class = "tablinks" onclick = "OpenTab(event, 'Profile')"> Profile </button>
+            <button class = "tablinks" onclick = "OpenTab(event, 'Openings')"> Openings </button>
+            <button class = "tablinks" onclick = "OpenTab(event, 'Learn')" id = "defaultOpen"> Learn </button>
+            <button class = "tablinks" onclick = "OpenTab(event, 'Tournaments')"> Tournaments </button>
+            <button class = "tablinks" onclick = "OpenTab(event, 'Upgrades')">Upgrades </button>
+            
+            
+            
+
+            </div>
+        <!-- Content-->
+
+        <div id = "Profile" class = "tabcontent">
+            <p> Profile still in construction!</p>
+            </div>
+        <div id = "Openings" class = "tabcontent">
+            <p> Openings still in construction! </p>
+        </div>
+        <div id = "Learn" class = "tabcontent">
+            <div id = "learn_buttons">
+                <button onclick = "puzzles()" id = "puzzles"> <h3>>Solve Puzzles | $3</h3><p> Increases xp </p> </button>
+                <button onclick = "online_game()" id = "online_games"> <h3>>Play an Online Game | $5</h3><p> Increases xp more </p> </button>
+                <button onclick = "chess_class()" id = "puzzles"> <h3>>Take a chess class | $15</h3><p> Increases xp even more</p> </button>
+            </div>
+            <div id="progress-bar"> 
+                <object id="progress-bar-fill" style="width: 70px;"></object> 
+            </div>
+            
+
+            </div>
+        <div id = "Tournaments" class = "tabcontent">
+            <p> Tmts still in construction </p>
+        </div>
+        <div id = "Upgrades" class = "tabcontent"> 
+            <p> Upgrades still in construction </p>
+        </div>
+        
+    </body>
+<html>

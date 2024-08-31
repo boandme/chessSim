@@ -1,0 +1,95 @@
+.tabcontent {
+    display:none;
+}
+#title_line {
+    text-align: center;
+    background-color: #f8d8ad;
+}
+#title {
+    font-size: 50px;
+    text-align: center;
+}
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial;
+  }
+#money {
+    font-size: 30px;
+    float:left;
+}
+#moneysign {
+    font-size: 30px;
+    float:left;
+}
+
+.tablinks {
+    background-color: #653a23;
+    color:white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 20%;
+  }
+  .tablinks.active {
+    background-color: #A96249; 
+  }
+  
+  
+  .tablinks:hover {
+    background-color: #A96249;
+  }
+
+  .tabcontent {
+    padding: 100px 20px;
+    height: 100%;
+    background-color: #f8d8ad;
+  }
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #653a23;
+}
+.tab button {
+    background-color: #653a23;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+
+#puzzles {
+    margin-right: 75px;
+}
+#online_games {
+    margin-right: 75px;
+}
+
+#progress-bar { 
+    width: 1000px; 
+     min-width: 300px; 
+     background-color: #f9f9f9; 
+     border-radius: 5px; 
+     box-shadow: 0 1px 3px #e6e6e6 inset; 
+     display: block; 
+     margin: auto;
+     margin-top:10px;
+     border: 1px solid #e1e1e1; /* subtle outline */
+     position:absolute;
+     bottom: 10px;
+} 
+#progress-bar-fill { 
+     height: 50px; 
+     display: block; 
+     background-color: red; 
+     border-radius: 4px; 
+     transition: width 0.2s ease-in-out; 
+     background-image: repeating-linear-gradient( 45deg, #f9f9f9, #e0e0e0 10px, #189AB4 10px, #189AB4 20px ); /* darker diagonal stripes */
+} 

@@ -5,6 +5,9 @@ var current_xp = 0;
 var levelup_xp = 30;
 var level = 1;
 var current_width = 70;
+var year = 2024;
+var monthnum = 1;
+var month =  "Jan"
 function OpenTab(et, TabName) {
   var i = 0
   var tablinks = ""
@@ -19,6 +22,46 @@ function OpenTab(et, TabName) {
   }
   document.getElementById(TabName).style.display = "block";
   et.currentTarget.className += " active";
+}
+var locations = ["International ", "National ", "Regional ", "Seattle ", "Portland ", "SF ", "St louis ", "New York City ", "Charlotte ", "Atlanta ", "Tampa ", "Houston ", "Minneapolis ", "Los Angeles ", "Baltimore ", "Washington DC "]
+var name_middle = ["Grand ", "Annual ", "Classic ", "Classical ", "Invitational "]
+var name_end = ["Tournament", "Prix", "Open", "Tournament", "Open", "Tournament"]
+
+// Time System //
+setInterval(changeMonth, 30000)
+
+function changeMonth() {
+  monthnum ++;
+  if ( month === "Jan") {
+    month = "Feb";
+  }
+  else if (month === "Feb") {
+    month = "Mar"
+  }
+  else if (month === "Mar") {
+    month = "Apr"
+  }
+  else if (month === "May") {
+    month = "Jun"
+  }
+  else if (month === "Jul") {
+    month = "Aug"
+  }
+  else if (month === "Oct") {
+    month = "Nov"
+  }
+  else if (month === "Nov") {
+    month = "Dec"
+  }
+  else if (month === "Dec") {
+    month = "Jan"
+    monthnum = 1
+    year ++;
+  }
+  document.getElementById("month").innerText = month
+  document.getElementById("year").innerText = year
+  
+
 }
 
 
@@ -96,3 +139,19 @@ function chess_class() {
 
   }
 }
+
+function TmtGenerator() {
+  var nb  = locations[(Math.floor(Math.random() * locations.length))]
+  var nm = name_middle[(Math.floor(Math.random() * name_middle.length))]
+  var ne = name_end[(Math.floor(Math.random() * name_end.length))]
+  connected = nb.concat(nm)
+  console.log(connected.concat(ne))
+  return connected.concat(ne)
+}
+TmtGenerator()
+let table = document.getElementById("tablebody")
+let row = document.createElement("tr")
+let tmt1 = document.createElement("td")
+tmt1.innerText = TmtGenerator()
+row.appendChild(tmt1)
+table.appendChild(row)

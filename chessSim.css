@@ -64,6 +64,11 @@ body, html {
     font-size: 17px;
 }
 
+#month, #year {
+    float:right;
+    font-size: 30px;
+}
+
 
 #puzzles {
     margin-right: 75px;
@@ -108,4 +113,8 @@ body, html {
     right:150px;
     font-size: 30px;
     bottom: 15px;
+}
+
+#Learn {
+    display:block;
 }

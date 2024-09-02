@@ -6,8 +6,11 @@ var levelup_xp = 30;
 var level = 1;
 var current_width = 70;
 var year = 2024;
-var monthnum = 1;
+var monthnum = 6;
 var month =  "Jan"
+var months = ["Jan", "Feb", "Mar", "Apr", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+var monthstr = "Jan"
+var tournaments = {}
 function OpenTab(et, TabName) {
   var i = 0
   var tablinks = ""
@@ -148,10 +151,56 @@ function TmtGenerator() {
   console.log(connected.concat(ne))
   return connected.concat(ne)
 }
-TmtGenerator()
-let table = document.getElementById("tablebody")
-let row = document.createElement("tr")
-let tmt1 = document.createElement("td")
-tmt1.innerText = TmtGenerator()
-row.appendChild(tmt1)
-table.appendChild(row)
+
+function CreateDate(){
+  let tmtmonth = Math.floor(Math.random() * 12)
+  var monthstr = months[tmtmonth-1]
+  if (tmtmonth > monthnum){
+    var tmtyear = year
+    
+  }
+  else if (tmtmonth <= monthnum) {
+    tmtyear = year+ 1
+    
+  }
+  var fullstr = monthstr.concat(" ")
+  var bigstr = fullstr.concat(String(tmtyear))
+  console.log(bigstr)
+  return bigstr
+  
+
+}
+function GenerateTmts(){
+  console.log("hey")
+  tmts = document.getElementById("Tournaments")
+  length = Object.keys(tournaments).length;
+  if (tmts) {
+    let table = document.getElementById("tablebody")
+    if (length === 0) {
+      for (let i = 0; i<6; i++) {
+        let row = document.createElement("tr")
+        let date = document.createElement("td")
+        let price = document.createElement("td")
+        let name  = document.createElement("td")
+        let d = "$"
+        var tprice = Math.floor(Math.random() * (60 - 20 + 1)) + 20 
+        var tname = TmtGenerator()
+        var tdate = CreateDate()
+        tournaments[tname] = tdate
+        console.log(tournaments)
+        date.innerText = tdate
+        name.innerText = tname
+        price.innerText = d.concat(String(tprice))
+        row.appendChild(name)
+        row.appendChild(date)
+        row.appendChild(price)
+        table.appendChild(row)
+      }
+    }
+    
+    
+}
+}
+
+
+

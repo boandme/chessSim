@@ -13,10 +13,10 @@
             
         </div>
         <div id = "tab">
-            <button class = "tablinks" onclick = "OpenTab(event, 'Profile')"> Profile </button>
+            <button class = "tablinks" onclick = "OpenTab(event, 'Profile')" > Profile </button>
             <button class = "tablinks" onclick = "OpenTab(event, 'Openings')"> Openings </button>
             <button class = "tablinks" onclick = "OpenTab(event, 'Learn')" id = "defaultOpen"> Learn </button>
-            <button class = "tablinks" onclick = "OpenTab(event, 'Tournaments')"> Tournaments </button>
+            <button class = "tablinks" onclick = "OpenTab(event, 'Tournaments');GenerateTmts();"> Tournaments </button>
             <button class = "tablinks" onclick = "OpenTab(event, 'Upgrades')">Upgrades </button>
             
             
@@ -51,11 +51,8 @@
                 <thead>
                     <th> Tournament Name </th>
                     <th> Date </th>
+                    <th> Price </th>
                 </thead>
-                <tr>
-                    <td> tmt1</td>
-                    <td> Feb 2024</td>
-                </tr>
                 <tbody>
 
                 </tbody>

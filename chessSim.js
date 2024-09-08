@@ -11,6 +11,7 @@ var month =  "Jan"
 var months = ["Jan", "Feb", "Mar", "Apr", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 var monthstr = "Jan"
 var tournaments = {}
+var my_tournaments = {}
 function OpenTab(et, TabName) {
   var i = 0
   var tablinks = ""
@@ -154,7 +155,7 @@ function TmtGenerator() {
 
 function CreateDate(){
   let tmtmonth = Math.floor(Math.random() * 12)
-  var monthstr = months[tmtmonth-1]
+  
   if (tmtmonth > monthnum){
     var tmtyear = year
     
@@ -163,8 +164,9 @@ function CreateDate(){
     tmtyear = year+ 1
     
   }
-  var fullstr = monthstr.concat(" ")
-  var bigstr = fullstr.concat(String(tmtyear))
+  var monthstr = months[tmtmonth-1]
+  var fullstr = monthstr + " "
+  var bigstr = fullstr + String(tmtyear)
   console.log(bigstr)
   return bigstr
   
@@ -182,10 +184,15 @@ function GenerateTmts(){
         let date = document.createElement("td")
         let price = document.createElement("td")
         let name  = document.createElement("td")
+        
         let d = "$"
         var tprice = Math.floor(Math.random() * (60 - 20 + 1)) + 20 
         var tname = TmtGenerator()
         var tdate = CreateDate()
+        var signup = document.createElement('INPUT')
+        signup.setAttribute("onclick", `SignUp('${tname}', '${tdate}')`)
+        signup.setAttribute("value", "Sign Up")
+        signup.setAttribute("type","button");
         tournaments[tname] = tdate
         console.log(tournaments)
         date.innerText = tdate
@@ -194,12 +201,21 @@ function GenerateTmts(){
         row.appendChild(name)
         row.appendChild(date)
         row.appendChild(price)
+        row.appendChild(signup)
         table.appendChild(row)
+
+       
       }
     }
     
     
 }
+}
+
+function SignUp(tmt_name, tmt_date) {
+  console.log("wsg")
+  my_tournaments[tmt_name] = tmt_date
+  console.log(my_tournaments)
 }
 
 

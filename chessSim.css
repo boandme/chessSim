@@ -8,9 +8,17 @@
     background-color: #f8d8ad;
 }
 
-table, th, td {
+table, th, td, input {
     border: 1px solid black;
     font-size: 25px;
+}
+input {
+    background-color: #A96249;
+    color: #ffffff;
+}
+
+input:hover {
+    background-color:#653a23;
 }
 
 #title {
